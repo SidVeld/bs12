@@ -1150,6 +1150,7 @@
 	pixel_x = 8;
 	pixel_y = -3
 	},
+/obj/item/device/holopad,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/office/xo)
 "cq" = (
@@ -2428,6 +2429,7 @@
 	desc = "A 'Space Life' brand Security Officer action figure. This one seems rather old. A small heart is sewn into the armor vest."
 	},
 /obj/item/sticky_pad/random,
+/obj/item/device/holopad,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/heads/office/cos)
 "ev" = (
@@ -4405,6 +4407,7 @@
 	},
 /obj/random_multi/single_item/memo_engineering,
 /obj/item/storage/box/encryptionkey/engineering,
+/obj/item/device/holopad,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/heads/office/ce)
 "iU" = (
@@ -5615,6 +5618,7 @@
 	pixel_x = 9;
 	pixel_y = -24
 	},
+/obj/item/device/holopad,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/heads/office/sea)
 "mA" = (
@@ -5745,6 +5749,7 @@
 /area/hallway/primary/bridge/aft)
 "mT" = (
 /obj/structure/table/woodentable/walnut,
+/obj/item/device/holopad,
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/heads/cobed)
 "mU" = (
@@ -9567,6 +9572,7 @@
 /obj/effect/floor_decal/corner/brown/mono,
 /obj/structure/closet/secure_closet/deckofficer,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/device/holopad,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/quartermaster/deckchief)
 "wP" = (
@@ -11751,6 +11757,7 @@
 	dir = 4;
 	pixel_x = 21
 	},
+/obj/item/device/holopad,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/heads/office/cmo)
 "EV" = (
@@ -13023,6 +13030,7 @@
 /obj/effect/floor_decal/corner/research/half{
 	dir = 1
 	},
+/obj/item/device/holopad,
 /turf/simulated/floor/tiled/monotile,
 /area/crew_quarters/heads/office/rd)
 "IW" = (
@@ -14355,6 +14363,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/item/device/holopad,
 /turf/simulated/floor/carpet/green,
 /area/crew_quarters/heads/office/cl)
 "OD" = (
@@ -15803,6 +15812,7 @@
 	pixel_y = -4
 	},
 /obj/item/hand_labeler,
+/obj/item/device/holopad,
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/heads/office/sgr)
 "Ug" = (
