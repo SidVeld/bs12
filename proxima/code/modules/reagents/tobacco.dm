@@ -47,7 +47,6 @@
 	description = "tobacco leaves that have been mixed with coffee powder"
 	taste_description = "sweet tobacco and energetic coffee."
 	scent = "sweet tobacco and energy tobacco"
-	scent_descriptor = SCENT_DESC_ODOR
 
 
 
