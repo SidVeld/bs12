@@ -4,9 +4,9 @@
 #define CALL_IN_CALL 3
 
 /obj/item/device/holopad
-	name = "Holopad"
-	desc = "Small handheld disk with controls."
-	icon = 'proxima/icons/obj/holopad.dmi'
+	name = "Tele-pda"
+	desc = "Tele-pda is a convenient device that allows you to talk over a closed third-party connection that will protect you from sudden wiretapping or intrusion into your conversations. Rejoice in such a useful thing."
+	icon = 'proxima/icons/obj/holopda.dmi'
 	icon_state = "holopad"
 	item_state = "card-id"
 	w_class = ITEM_SIZE_TINY
@@ -15,8 +15,6 @@
 	var/uniq_id
 	var/obj/item/device/holopad/abonent = null
 	var/call_state = CALL_NONE
-	var/obj/effect/hologram = null
-	var/updatingPos = 0
 	origin_tech = list(TECH_DATA = 4, TECH_BLUESPACE = 2, TECH_MAGNET = 4)
 
 /obj/item/device/holopad/Initialize()
@@ -90,7 +88,6 @@
 			abonent.acceptCall()
 			call_state = CALL_IN_CALL
 			icon_state = "holopad_in_call"
-			addtimer(CALLBACK(src, .proc/update_holo), 1)
 
 			audible_message("<span class='name'>[voice]</span> transmits, \"Connection established\"", hearing_distance = 1)
 		else
@@ -102,7 +99,6 @@
 	else if(call_state == CALL_CALLING)
 		call_state = CALL_IN_CALL
 		icon_state = "holopad_in_call"
-		addtimer(CALLBACK(src, .proc/update_holo), 1)
 
 		audible_message("<span class='name'>[voice]</span> transmits, \"Connection established\"", hearing_distance = 1)
 
@@ -118,45 +114,7 @@
 	icon_state = initial(icon_state)
 	desc = initial(desc)
 	abonent = null
-	qdel(hologram)
 
-/obj/item/device/holopad/dropped()
-	update_holo()
-
-/obj/item/device/holopad/proc/update_holo()
-	if(call_state == CALL_IN_CALL)
-		if(!abonent)
-			return
-		if(!abonent.hologram)
-			abonent.hologram = new()
-			abonent.hologram.name = "Hologram [sanitize(id)]"
-			abonent.hologram.layer = 5
-		if(isliving(loc))
-			abonent.hologram.icon = getHologramIcon(build_composite_icon_omnidir(loc))
-		else
-			abonent.hologram.icon = icon('icons/effects/effects.dmi', "icon_state"="nothing")
-		if(!abonent.updatingPos)
-			abonent.update_holo_pos()
-
-/obj/item/device/holopad/proc/update_holo_pos()
-	if(call_state != CALL_IN_CALL)
-		updatingPos = 0
-		return
-	updatingPos = 1
-	if(isliving(loc))
-		var/mob/living/L = loc
-		hologram.dir = turn(L.dir,180)
-		hologram.loc = L.loc
-		hologram.pixel_x = ((L.dir&4)?32:((L.dir&8)?-32:0))
-		hologram.pixel_y = ((L.dir&1)?32:((L.dir&2)?-32:0))
-	else if(isturf(loc))
-		hologram.dir = 2
-		hologram.loc = loc
-		hologram.pixel_x = 0
-		hologram.pixel_y = 0
-	else
-		hangUp()
-	addtimer(CALLBACK(src, .proc/update_holo_pos), 2)
 
 
 /obj/item/device/holopad/attack_self(mob/user)
@@ -183,10 +141,15 @@
 		listening |= G
 
 	if(!user)
-		voice = "Holopad Background Voice"
+		voice = "Tele-link Background Voice"
 	for(var/mob/M in listening)
 		to_chat(M, "<span class='name'>[voice]</span> transmits, \"[speaking]\" ")
 
+/obj/item/device/holopad/wrist
+	name = "Tele-wrist"
+	desc = "The tele-wrist is a useful device if it is inconvenient for you to hold your tele-pda to your ear, now you can hook it on your hand and chat while jogging or working."
+	icon = 'proxima/icons/obj/telewatch.dmi'
+	slot_flags = SLOT_GLOVES
 
 #undef CALL_NONE
 #undef CALL_CALLING
