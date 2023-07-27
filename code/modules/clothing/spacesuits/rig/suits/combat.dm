@@ -54,8 +54,7 @@
 		/obj/item/storage/firstaid,
 		/obj/item/reagent_containers/hypospray,
 		/obj/item/roller,
-		/obj/item/device/suit_cooling_unit,
-		/obj/item/storage/backpack
+		/obj/item/device/suit_cooling_unit
 	)
 
 /obj/item/clothing/shoes/magboots/rig/combat
@@ -80,8 +79,7 @@
 		/obj/item/rig_module/power_sink,
 		/obj/item/rig_module/electrowarfare_suite,
 		/obj/item/rig_module/chem_dispenser/combat,
-		/obj/item/rig_module/cooling_unit,
-		/obj/item/rig_module/storage/heavy
+		/obj/item/rig_module/cooling_unit
 		)
 
 //Extremely OP, hardly standard issue equipment
@@ -141,8 +139,7 @@
 		/obj/item/storage/firstaid,
 		/obj/item/reagent_containers/hypospray,
 		/obj/item/roller,
-		/obj/item/device/suit_cooling_unit,
-		/obj/item/storage/backpack
+		/obj/item/device/suit_cooling_unit
 	)
 
 /obj/item/clothing/shoes/magboots/rig/military
@@ -167,6 +164,5 @@
 		/obj/item/rig_module/power_sink,
 		/obj/item/rig_module/electrowarfare_suite,
 		/obj/item/rig_module/chem_dispenser/combat,
-		/obj/item/rig_module/cooling_unit,
-		/obj/item/rig_module/storage/heavy
+		/obj/item/rig_module/cooling_unit
 		)

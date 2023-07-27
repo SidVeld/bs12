@@ -28,7 +28,6 @@
 		/obj/item/rig_module/mounted/plasmacutter,
 		/obj/item/rig_module/maneuvering_jets,
 		/obj/item/rig_module/power_sink,
-		/obj/item/rig_module/storage,
 		/obj/item/rig_module/cooling_unit
 		)
 
@@ -47,8 +46,7 @@
 		/obj/item/device/radio,
 		/obj/item/melee/baton,
 		/obj/item/gun,
-		/obj/item/pickaxe,
-		/obj/item/storage/backpack
+		/obj/item/pickaxe
 	)
 
 /obj/item/clothing/shoes/magboots/rig/vox_rig

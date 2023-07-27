@@ -28,8 +28,7 @@
 		/obj/item/rig_module/electrowarfare_suite,
 		/obj/item/rig_module/chem_dispenser/combat,
 		/obj/item/rig_module/fabricator/energy_net,
-		/obj/item/rig_module/cooling_unit,
-		/obj/item/rig_module/storage/heavy
+		/obj/item/rig_module/cooling_unit
 		)
 
 //Has most of the modules removed
@@ -37,8 +36,7 @@
 	initial_modules = list(
 		/obj/item/rig_module/ai_container,
 		/obj/item/rig_module/electrowarfare_suite,
-		/obj/item/rig_module/cooling_unit,
-		/obj/item/rig_module/storage/heavy
+		/obj/item/rig_module/cooling_unit
 		)
 
 /obj/item/clothing/gloves/rig/merc
@@ -74,8 +72,7 @@
 		/obj/item/ammo_casing,
 		/obj/item/melee/baton,
 		/obj/item/melee/energy/sword,
-		/obj/item/handcuffs,
-		/obj/item/storage/backpack
+		/obj/item/handcuffs
 	)
 
 /obj/item/clothing/shoes/magboots/rig/merc
@@ -118,7 +115,6 @@
 	initial_modules = list(
 		/obj/item/rig_module/ai_container,
 		/obj/item/rig_module/electrowarfare_suite,
-		/obj/item/rig_module/storage/heavy
 		)
 
 /obj/item/clothing/head/helmet/space/rig/merc/heavy
