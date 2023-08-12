@@ -1056,6 +1056,9 @@
 
 //Throwing stuff
 
+/// [PRX] Custom throw icon
+#define THROW_MODE_ICON 'proxima/icons/effects/throw_icon.dmi'
+
 /mob/proc/toggle_throw_mode()
 	if (src.in_throw_mode)
 		throw_mode_off()
@@ -1067,10 +1070,18 @@
 	if(src.throw_icon) //in case we don't have the HUD and we use the hotkey
 		src.throw_icon.icon_state = "act_throw_off"
 
+	if (client?.mouse_pointer_icon == THROW_MODE_ICON)
+		client.mouse_pointer_icon = initial(client.mouse_pointer_icon)
+
 /mob/proc/throw_mode_on()
 	src.in_throw_mode = 1
 	if(src.throw_icon)
 		src.throw_icon.icon_state = "act_throw_on"
+
+	if (client?.mouse_pointer_icon == initial(client.mouse_pointer_icon))
+		client.mouse_pointer_icon = THROW_MODE_ICON
+
+#undef THROW_MODE_ICON
 
 /mob/proc/check_CH(CH_name as text, var/CH_type, var/second_arg = null)
 	if(!src.client.CH || !istype(src.client.CH, CH_type))//(src.client.CH.handler_name != CH_name))
