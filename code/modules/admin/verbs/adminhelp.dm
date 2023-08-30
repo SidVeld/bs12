@@ -128,6 +128,8 @@ var/global/list/adminhelp_ignored_words = list("unknown","the","a","an","of","mo
 			T = emoji_parse(msg, X)
 
 			to_chat(X, T)
+
+			window_flash(X)  // PRX
 	original_msg = emoji_parse(original_msg, src)
 	//show it to the person adminhelping too
 	to_chat(src, "<span class=\"staff_pm\">PM to-<b>Staff</b> (<a href='?src=\ref[usr];close_ticket=\ref[ticket]'>CLOSE</a>): [original_msg]</span>")
